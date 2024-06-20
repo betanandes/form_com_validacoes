@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário Back-End</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
+        <span id="nomeError" class="error"></span>
+        <br><br>
+
+        <label for="nomeMaterno">Data:</label>
+        <input type="date" id="data" name="dataNasc" required>
+        <br><br>
+
+        <label for="nomeMaterno">Gênero:</label>
+        <input type="radio" name="sexo" value="M" required>Masculino</input>
+        <input type="radio" name="sexo" value="F" required>Feminino</input>
+        <input type="radio" name="sexo" value="O" required>Outro</input>
+        <br><br>
+        
+        <label for="nomeMaterno">Nome Materno:</label>
+        <input type="text" id="nomeMaterno" name="nomeMaterno">
+        <span id="nomeMaternoError" class="error"></span>
+        <br><br>
+        
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00">
+        <span id="cpfError" class="error"></span>
+        <br><br>
+        
+        <label for="celular">Celular:</label>
+        <input type="text" id="celular" name="celular" placeholder="+55(21)99999-9999"  onkeydown="ajustaTelefone(this)" onkeypress="ajustaTelefone(this)" onkeyup="ajustaTelefone(this)">
+        <span id="celularError" class="error"></span>
+        <br><br>
+        
+        <label for="telefoneFixo">Telefone Fixo:</label>
+        <input type="text" id="telefoneFixo" name="telefoneFixo" placeholder="+55(21)99999-9999"  onkeydown="ajustaTelefone(this)" onkeypress="ajustaTelefone(this)" onkeyup="ajustaTelefone(this)">
+        <span id="telefoneFixoError" class="error"></span>
+        <br><br>
+        
+        <label for="endereco">Endereço Completo:</label>
+        <input type="text" id="endereco" name="endereco">
+        <span id="enderecoError" class="error"></span>
+        <br><br>
+        
+        <label for="login">Login:</label>
+        <input type="text" id="login" name="login">
+        <span id="loginError" class="error"></span>
+        <br><br>
+        
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha">
+        <span id="senhaError" class="error"></span>
+        <br><br>
+
+        <label for="senha">Confirmação da Senha:</label>
+        <input type="password" id="confirmSenha" name="senha">
+        <span id="confSenhaError" class="error"></span>
+        <br><br>
+        
+        <button type="reset">Limpar</button>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
